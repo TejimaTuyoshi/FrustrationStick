@@ -3,14 +3,14 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-public class CountDownTimer : MonoBehaviour
+public class CountDownTimer : GameManegar
 {
     public static float CountDownTime;    // カウントダウンタイム
     public Text TextCountDown;              // 表示用テキストUI
 
     // Use this for initialization
     void Start()
-    {
+    {  
         CountDownTime = 10.0F;    // ステージ１用のタイマー
     }
 
@@ -28,6 +28,5 @@ public class CountDownTimer : MonoBehaviour
         {
             SceneManager.LoadScene("Gameover", LoadSceneMode.Single);
         }
-
-    }
+    } 
 }
