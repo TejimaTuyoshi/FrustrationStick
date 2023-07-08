@@ -51,7 +51,7 @@ public class DateSaver : MonoBehaviour
     /// </summary>
     void ShowMessage()
     {
-        GameObject go = GameObject.Find(_messageTextName);
+        GameObject go = GameObject.Find(_time);
         Text text = go?.GetComponent<Text>();
 
         if (text)
