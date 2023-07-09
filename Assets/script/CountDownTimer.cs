@@ -7,6 +7,7 @@ public class CountDownTimer : GameManegar
 {
     public static float CountDownTime;    // カウントダウンタイム
     public Text TextCountDown;              // 表示用テキストUI
+    public static float cleartime = 99.0f;
 
     // Use this for initialization
     void Start()
@@ -29,4 +30,9 @@ public class CountDownTimer : GameManegar
             SceneManager.LoadScene("Gameover", LoadSceneMode.Single);
         }
     } 
+
+    public static void clearscene()
+    {
+        cleartime = CountDownTime;
+    }
 }

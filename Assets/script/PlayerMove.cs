@@ -23,23 +23,27 @@ public class Move : MonoBehaviour
     {
         Vector2 position = transform.position;
 
-        if (Input.GetKey("a"))
+        if (Input.GetButtonDown("a"))
         {
             position.x -= speed;
             renderer.flipX = false;
         }
-        else if (Input.GetKey("d"))
+        else if (Input.GetButtonDown("d"))
         {
             position.x += speed;
             renderer.flipX = true;
         }
-        if (Input.GetButtonDown("Jump") && this.jumpCount < 2)
+        else if (Input.GetButtonDown("w"))
         {
-            Debug.Log("Jump");
-            this.rbody2D.AddForce(transform.up * jumpForce);
-            jumpCount++;
+            position.y += speed;
+            renderer.flipX = false;
         }
-        transform.position = position;
+        else if (Input.GetButtonDown("s"))
+        {
+            position.y -= speed;
+            renderer.flipX = false;
+        }
+
     }
 
     void OnCollisionEnter2D(Collision2D other)

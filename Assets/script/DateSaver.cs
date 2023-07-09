@@ -5,13 +5,15 @@ using UnityEngine.UI;
 public class DateSaver : MonoBehaviour
 {
     
-    [SerializeField] int _time = 0;
+    [SerializeField] float _time = 0;
+    //string _Time = _time.Tostring("F1");
     /// <summary>Start 関数の処理が終わっているか表すフラグ</summary>
     bool _isStarted = false;
     string _Stoptime = null;
 
      public void Start()
      {
+        string _Time = _time.ToString("F1");
         if (FindObjectsOfType<DateSaver>().Length > 1)
         {
             // 重複しないように、既にある時は自分自身を破棄する
@@ -51,13 +53,14 @@ public class DateSaver : MonoBehaviour
     /// </summary>
     void ShowMessage()
     {
-        GameObject go = GameObject.Find(_time);
+        GameObject go = GameObject.Find("_Time");
         Text text = go?.GetComponent<Text>();
 
         if (text)
         {
-            text.text = $"おお！<b><color=red>{_name}</color></b> よ！しんでしまうとは なにごとだ！";
-            Debug.Log(text.text);
+            text.text = CountDownTimer.cleartime.ToString("F1");
+
+
         }
     }
 }
