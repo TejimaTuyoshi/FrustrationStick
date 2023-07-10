@@ -2,13 +2,18 @@ using UnityEngine;
 
 public class Lever : GameSwichsRules
 {
+    
+    [SerializeField] int _time = 1;
 
-    [SerializeField] int _time = 5;
-
+    public void Start()
+    {
+        
+        _Go = ActivateTiming.Shift;
+    }
 
     public override void select()
     {
-        FindObjectOfType<GameManegar>().Addtime(_time);
+        FindObjectOfType<CountDownTimer>().Addtime(_time);
     }
 
 }

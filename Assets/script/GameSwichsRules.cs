@@ -11,7 +11,7 @@ public class GameSwichsRules : MonoBehaviour
     [SerializeField] GameObject _door;
     [SerializeField] GameObject _obstacle;
     [SerializeField] AudioClip _audio = null;
-    [SerializeField] ActivateTiming _Go;
+    [SerializeField] protected ActivateTiming _Go;
 
 
     public virtual void On()
@@ -26,8 +26,7 @@ public class GameSwichsRules : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        _button.SetActive(true);
-        _lever.SetActive(true);      
+         
     }
 
     // Update is called once per frame
@@ -55,7 +54,7 @@ public class GameSwichsRules : MonoBehaviour
         }
     }
 
-    enum ActivateTiming
+    protected enum ActivateTiming
     {
         Touch,//ƒ{ƒ^ƒ“—p
 

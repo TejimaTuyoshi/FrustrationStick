@@ -3,12 +3,12 @@ using UnityEngine;
 public class Button : GameSwichsRules
 {
     
-    [SerializeField] int _time = 5 ;
+    [SerializeField] int _time = 1 ;
 
     
     public override void On()
     {
-        FindObjectOfType<GameManegar>().Addtime(_time);
+        FindObjectOfType<CountDownTimer>().Addtime(_time);
     }
 
 }

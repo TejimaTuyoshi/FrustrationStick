@@ -29,7 +29,17 @@ public class CountDownTimer : GameManegar
         {
             SceneManager.LoadScene("Gameover", LoadSceneMode.Single);
         }
-    } 
+    }
+
+    public void Addtime(int time)
+    {
+        CountDownTime += time;
+
+        if (CountDownTime > 0)
+        {
+            Debug.Log("タイマー追加!");
+        }
+    }
 
     public static void clearscene()
     {
