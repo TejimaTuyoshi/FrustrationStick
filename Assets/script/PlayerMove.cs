@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization;
+using UnityEditor.Tilemaps;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -9,6 +10,9 @@ public class PlayerMove : MonoBehaviour
     private Rigidbody2D rbody2D;//当たり判定の名前の定義
     public float speed = 0.05f;//移動する際の一フレームあたりの移動距離
     private new SpriteRenderer renderer;//反転する
+    float _h;
+    float _v;
+   
     
 
     void Start()
@@ -21,29 +25,28 @@ public class PlayerMove : MonoBehaviour
     {
         Vector2 position = transform.position;
 
-        if (Input.GetKey("a"))
-        {
-            position.x -= speed;
-            renderer.flipX = false;
-        }
-        else if (Input.GetKey("d"))
-        {
-            position.x += speed;
-            renderer.flipX = true;
-        }
-        else if (Input.GetKey("w"))
-        {
-            position.y += speed;
-            renderer.flipX = false;
-        }
-        else if (Input.GetKey("s"))
-        {
-            position.y -= speed;
-            renderer.flipX = false;
-        }
-        transform.position = position;
+        _h = Input.GetAxisRaw("Horizontal");
+        _v = Input.GetAxisRaw("Vertical");
+       
 
+        rbody2D.AddForce(Vector2.right * _h * speed, ForceMode2D.Force);
+        rbody2D.AddForce(Vector2.up * _v * speed, ForceMode2D.Force);
+
+        //if (_h < 0)
+        //{
+        //    renderer.flipX = true;
+        //}
+        //else 
+        //{
+        //    renderer.flipX = false;
+        //}
+        //transform.position = position;
     }
-
-   
+    void LateUpdate()
+    {
+        if(_h != 0)
+        {
+            renderer.flipX = (_h < 0);
+        }
+    }
 }
