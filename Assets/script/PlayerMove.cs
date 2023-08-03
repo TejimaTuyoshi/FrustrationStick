@@ -12,9 +12,7 @@ public class PlayerMove : MonoBehaviour
     private new SpriteRenderer renderer;//”½“]‚·‚é
     float _h;
     float _v;
-   
     
-
     void Start()
     {
         rbody2D = GetComponent<Rigidbody2D>();
@@ -31,6 +29,7 @@ public class PlayerMove : MonoBehaviour
 
         rbody2D.AddForce(Vector2.right * _h * speed, ForceMode2D.Force);
         rbody2D.AddForce(Vector2.up * _v * speed, ForceMode2D.Force);
+        
 
         //if (_h < 0)
         //{

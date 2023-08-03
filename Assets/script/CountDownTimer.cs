@@ -5,14 +5,14 @@ using UnityEngine.UI;
 
 public class CountDownTimer : GameManegar
 {
-    public static float CountDownTime;    // カウントダウンタイム
+    [SerializeField] static float CountDownTime;    // カウントダウンタイム
     public Text TextCountDown;              // 表示用テキストUI
     public static float cleartime = 99.0f;
 
     // Use this for initialization
     void Start()
     {  
-        CountDownTime = 10.0F;    // ステージ１用のタイマー
+        CountDownTime = 20.0F;    // ステージ１用のタイマー
     }
 
     // Update is called once per frame

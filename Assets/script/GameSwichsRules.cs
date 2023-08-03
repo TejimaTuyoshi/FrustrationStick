@@ -8,8 +8,8 @@ public class GameSwichsRules : MonoBehaviour
 {
     [SerializeField] GameObject _button;
     [SerializeField] GameObject _lever;
-    [SerializeField] GameObject _door;
-    [SerializeField] GameObject _obstacle;
+    [SerializeField] GameObject _dr;
+    [SerializeField] GameObject _ob;
     [SerializeField] AudioClip _audio = null;
     [SerializeField] protected ActivateTiming _Go;
 
@@ -44,12 +44,10 @@ public class GameSwichsRules : MonoBehaviour
             if (_Go == ActivateTiming.Touch)
             {
                 On();
-                Destroy(_door, 2f);
             }
             else if (_Go == ActivateTiming.Shift)
             {
                 select();
-                Destroy(_obstacle, 2f);
             }
         }
     }
