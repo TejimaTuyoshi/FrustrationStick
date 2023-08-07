@@ -3,7 +3,7 @@ using UnityEngine;
 public class Lever : GameSwichsRules
 {
     
-    [SerializeField] int _time = 1;
+    [SerializeField] int _time = 2;
     [SerializeField] GameObject _obstacle;
 
     public void Start()

@@ -44,10 +44,12 @@ public class GameSwichsRules : MonoBehaviour
             if (_Go == ActivateTiming.Touch)
             {
                 On();
+                Destroy(_button,2f);
             }
             else if (_Go == ActivateTiming.Shift)
             {
                 select();
+                Destroy(_lever,2f);
             }
         }
     }
