@@ -31,6 +31,7 @@ public class CountDownTimer : GameManegar
         }
     }
 
+
     public void Addtime(int time)
     {
         CountDownTime += time;
