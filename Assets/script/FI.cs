@@ -10,7 +10,7 @@ public class FI : MonoBehaviour
     [SerializeField] Image _fadeImage = default;
     [SerializeField] GameObject _button;
     [SerializeField] float _fadeTime = 1;
-    float _timer = 0;
+    float _timer = 5;
 
     public void Fade()
     {
@@ -30,12 +30,12 @@ public class FI : MonoBehaviour
             _timer -= Time.deltaTime;
             Color c = _fadeImage.color;
             c.a = _timer / _fadeTime;
+            Debug.Log(_timer);
             _fadeImage.color = c;
 
             if (_timer > _fadeTime)
             {
                 Debug.Log("Fade Finish");
-                SceneManager.LoadScene("stage1", LoadSceneMode.Single);
                 yield break;
             }
 
