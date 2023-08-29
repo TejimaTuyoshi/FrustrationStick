@@ -2,7 +2,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class DateSaver : MonoBehaviour
+public class DateShare : MonoBehaviour
 {
     
     [SerializeField] float _time = 0;
@@ -14,7 +14,7 @@ public class DateSaver : MonoBehaviour
      public void Start()
      {
         string _Time = _time.ToString("F1");
-        if (FindObjectsOfType<DateSaver>().Length > 1)
+        if (FindObjectsOfType<DateShare>().Length > 1)
         {
             // 重複しないように、既にある時は自分自身を破棄する
             Destroy(this.gameObject);
@@ -32,10 +32,7 @@ public class DateSaver : MonoBehaviour
     /// 名前を保存する
     /// </summary>
     /// <param name="input"></param>
-    public void Settime(InputField time)
-    {
-        _Stoptime = time.text;
-    }
+    public void Settime(InputField time) => _Stoptime = time.text;
 
     /// <summary>
     /// シーンがロードされた時に呼ばれる。

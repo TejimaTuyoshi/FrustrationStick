@@ -46,4 +46,5 @@ public class CountDownTimer : GameManegar
     {
         cleartime = CountDownTime;
     }
+
 }
