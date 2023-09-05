@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 182444934985335590}
   - component: {fileID: 182444934985335591}
-  - component: {fileID: 182444934985335585}
   m_Layer: 0
   m_Name: obstacle
   m_TagString: Untagged
@@ -85,21 +84,3 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &182444934985335585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 182444934985335588}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0e8754e2ca763e748b38bc5d0e73aca1, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _button: {fileID: 0}
-  _lever: {fileID: 0}
-  _door: {fileID: 0}
-  _obstacle: {fileID: 0}
-  _audio: {fileID: 0}
-  _Go: 0

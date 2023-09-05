@@ -13,7 +13,7 @@ public class CountDownTimer2 : GameManegar
     // Use this for initialization
     void Start()
     {
-        CountDownTime2 = 90.0F;    // ステージ１用のタイマー
+        CountDownTime2 = 90.0F;    // ステージ2用のタイマー
     }
 
     // Update is called once per frame
