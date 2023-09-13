@@ -70,3 +70,8 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Assets/Illust/alarm-clock.png
+Assets/Illust/alarm-clock.png.meta
+Assets/object/timer.prefab
+Assets/object/timer.prefab.meta
+Assets/Illust/
