@@ -18,8 +18,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Gameover.unity
     guid: b4812b8dc1d435044bc944bd889a1258
   - enabled: 1
+    path: Assets/Scenes/Gameover2.unity
+    guid: 2581b84c79cf80e4ca59d68d17cc1800
+  - enabled: 1
     path: Assets/Scenes/Gameclear.unity
     guid: 1aa4ee579a8f4994a88c4edf78dbb44a
+  - enabled: 1
+    path: Assets/Scenes/Gameclear2.unity
+    guid: 29381dc702e0320438aa2ca00c0e5dd5
   - enabled: 1
     path: Assets/Scenes/Help.unity
     guid: da1b372526bdbdb45a45e2a6d757f383

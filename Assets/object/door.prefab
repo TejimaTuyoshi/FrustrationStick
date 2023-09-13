@@ -126,7 +126,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _button: {fileID: 0}
   _lever: {fileID: 0}
-  _door: {fileID: 0}
-  _obstacle: {fileID: 0}
+  _dr: {fileID: 0}
+  _ob: {fileID: 0}
   _audio: {fileID: 0}
   _Go: 0
