@@ -26,7 +26,7 @@ public class ItemFade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<CountDownTimer2>().Addtime(_time);
+        FindObjectOfType<CountDownTimer>().Addtime(_time);
         Destroy(_timer,3f);
     }
 }
