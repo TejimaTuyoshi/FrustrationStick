@@ -5,15 +5,22 @@ using UnityEngine;
 public class Treport : MonoBehaviour
 {
     // Start is called before the first frame update
+    public AudioClip sound;
+    AudioSource audioSource;
+    bool _isPlaying = false;
+
     void Start()
     {
-        
+        audioSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (_isPlaying == true)
+        {
+            audioSource.PlayOneShot(sound);
+        }
     }
 
 
@@ -21,6 +28,7 @@ public class Treport : MonoBehaviour
       void OnTriggerEnter2D(Collider2D collision)
       {
        collision.gameObject.transform.position = new Vector2(-16, -26);
-      }
+        _isPlaying = true;
+    }
     
 }

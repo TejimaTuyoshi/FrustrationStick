@@ -10,7 +10,6 @@ public class GameSwichsRules : MonoBehaviour
     [SerializeField] GameObject _lever;
     [SerializeField] GameObject _dr;
     [SerializeField] GameObject _ob;
-    [SerializeField] AudioClip _audio = null;
     [SerializeField] protected ActivateTiming _Go;
 
 
