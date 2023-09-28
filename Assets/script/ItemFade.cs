@@ -34,7 +34,7 @@ public class ItemFade : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        FindObjectOfType<CountDownTimer>().Addtime(_time);
+        FindObjectOfType<CountDownTimer2>().Addtime(_time);
         Destroy(_timer,3f);
         _isPlaying = true;
     }

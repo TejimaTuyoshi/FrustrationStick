@@ -8,7 +8,7 @@ using UnityEngine.SceneManagement;
 public class PlayerMove : MonoBehaviour
 {
     private Rigidbody2D rbody2D;//当たり判定の名前の定義
-    public float speed = 0.05f;//移動する際の一フレームあたりの移動距離
+    [SerializeField] float speed = 0.05f;//移動する際の一フレームあたりの移動距離
     private new SpriteRenderer renderer;//反転する
     float _h;
     float _v;
@@ -46,6 +46,15 @@ public class PlayerMove : MonoBehaviour
         if(_h != 0)
         {
             renderer.flipX = (_h < 0);
+        }
+    }
+    public void Addspeed(int power)
+    {
+        speed += power;
+
+        if (speed > 0)
+        {
+            Debug.Log("スタン中...");
         }
     }
 }
