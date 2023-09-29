@@ -11,6 +11,8 @@ public class OZ : MonoBehaviour
     public AudioClip sound;
     AudioSource audioSource;
     bool _isPlaying = false;
+
+
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
@@ -22,6 +24,7 @@ public class OZ : MonoBehaviour
         if (_isPlaying == true)
         {
             audioSource.PlayOneShot(sound);
+            _isPlaying = false;
         }
     }
 
@@ -30,7 +33,16 @@ public class OZ : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))//Playerタグを使ったものが当たったと条件付ける
         {
             FindObjectOfType<CountDownTimerThird>().Addtime(_time);
+        }
+
+    }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))//Playerタグを使ったものが当たったと条件付ける
+        {
             _isPlaying = true;
+
         }
     }
+
 }

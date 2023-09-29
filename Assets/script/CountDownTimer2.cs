@@ -13,7 +13,7 @@ public class CountDownTimer2 : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        CountDownTime = 50.0F;    // ステージ１用のタイマー
+        CountDownTime = 80.0F;    // ステージ１用のタイマー
     }
 
     // Update is called once per frame

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using DG.Tweening;
 using Unity.VisualScripting;
-using static UnityEditor.PlayerSettings;
 
 public class MovingSpike : MonoBehaviour
 {
@@ -17,6 +16,7 @@ public class MovingSpike : MonoBehaviour
     void Start()
     {
         audioSource = GetComponent<AudioSource>();
+ 
     }
 
  

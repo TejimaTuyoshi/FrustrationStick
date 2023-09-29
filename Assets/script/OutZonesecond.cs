@@ -19,6 +19,7 @@ public class OutZoneSecond : MonoBehaviour
         if (_isPlaying == true)
         {
             audioSource.PlayOneShot(sound);
+            _isPlaying = false;
         }
     }
 
@@ -27,7 +28,16 @@ public class OutZoneSecond : MonoBehaviour
         if (collision.gameObject.CompareTag("Player"))//Playerタグを使ったものが当たったと条件付ける
         {
             FindObjectOfType<CountDownTimer2>().Addtime(_time);
+ 
+        }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))//Playerタグを使ったものが当たったと条件付ける
+        {
             _isPlaying = true;
+
         }
     }
 }
